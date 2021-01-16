@@ -27,9 +27,10 @@ class LedTest:
 			self.pixels.fill((0,0,0))
 
 
-	def light_group(self,list):
-		for item in list:
-			self.pixels[item] = (0,0,255)
+	def light_group(self,sc_dict):
+		pins = sc_dict['pins']
+		for pin in pins:
+			self.pixels[pin] = (0,0,255)
 
 	
 		
