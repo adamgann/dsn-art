@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[paperwidth=11in, 
+paperheight=17in, 
+left=0.5in,
+right=0.5in,
+top=0.25in,
+bottom=3.25in]{geometry}
+
+
+\newcommand{\placeimg}[1]{\includegraphics[height=3in,width=3in,keepaspectratio]{source/#1}}
+
+\begin{document}
+
+\begin{figure}
+\begin{tabular}{ccc}
+	% 1st Row 
+	\placeimg{juno} & 
+	\hspace{0.4in} \placeimg{mro} & 
+	\hspace{0.4in} \placeimg{voyager} \vspace {0.5in} \\
+	% 2nd Row  
+	\placeimg{percy} & 
+	\hspace{0.4in} \placeimg{osiris} & 
+	\hspace{0.4in} \placeimg{new_horizons} \vspace {0.5in}\\
+	% 3rd row 
+	\placeimg{lucy} & 
+	\hspace{0.4in} \placeimg{parker} & 
+	\hspace{0.4in} \placeimg{maven} \vspace {0.5in} \\
+  	% 4th row  
+	\placeimg{lro} & \hspace{0.5in}  & \hspace{0.5in}  \\
+\end{tabular}
+\end{figure}
+\end{document}

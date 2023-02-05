@@ -1,0 +1,20 @@
+Juno: https://en.wikipedia.org/wiki/Juno_(spacecraft)#/media/File:Juno_spacecraft_model_1.png
+Perservernce: https://www.noobrobo.com/2020/06/nasa-mars-2020-rover-perseverance-heres.html
+Voyager: https://en.wikipedia.org/wiki/Voyager_1#/media/File:Voyager_spacecraft_model.png
+MRO: https://en.wikipedia.org/wiki/File:Mars_Reconnaissance_Orbiter_spacecraft_model.png
+Osiris: https://upload.wikimedia.org/wikipedia/commons/7/7b/OSIRIS-REx_spacecraft_model.png
+New Horizons: https://en.wikipedia.org/wiki/New_Horizons#/media/File:New_Horizons_spacecraft_model_1.png
+Lucy: https://commons.wikimedia.org/wiki/File:Lucy_spacecraft_%28proposal_concept%29.png
+Parker: https://upload.wikimedia.org/wikipedia/commons/e/e1/Parker_Solar_Probe_spacecraft_model.png
+Maven: https://www.nasa.gov/content/goddard/maven-in-space/#.Y9_nOHbMJPY
+LRO: https://commons.wikimedia.org/wiki/File:Lunar_Reconnaissance_Orbiter_spacecraft_model_1.png
+
+Other candidates:
+Mars Odessy
+MMS
+Chandra
+GeoTail
+SOHO
+DSCOVR
+Trace Gas Orbiter
+
