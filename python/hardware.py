@@ -16,14 +16,51 @@ class Hardware:
 
 	def assign_leds(self):
 		self.leds = {}
-		self.leds['JUNO'] = {}
-		self.leds['JUNO']['pins'] = [6,7,8]
 
+		# Lunar Reconnaissance Orbiter
+		self.leds['LRO'] = {}
+		self.leds['LRO']['pins'] = [0,1,2]
+
+		# Lucy
+		self.leds['LUCY'] = {}
+		self.leds['LUCY']['pins'] = [3,4,5]
+
+		# Parker Solar Probe
+		self.leds['SPP'] = {}
+		self.leds['SPP']['pins'] = [6,7,8]
+
+		# Maven
+		self.leds['MVN'] = {}
+		self.leds['MVN']['pins'] = [9,10,11]
+
+		# New Horizons
 		self.leds['NHPC'] = {}
-		self.leds['NHPC']['pins'] = [9,10,11]
+		self.leds['NHPC']['pins'] = [12,13,14]
 
+		# OSIRIS-REX
 		self.leds['ORX'] = {}
-		self.leds['ORX']['pins'] = [12,13,14]
+		self.leds['ORX']['pins'] = [15,16,17]
+
+		# Mars 2020
+		self.leds['M20'] = {}
+		self.leds['M20']['pins'] = [18,19,20]
+
+		# Top Row
+		# Juno
+		self.leds['JNO'] = {}
+		self.leds['JNO']['pins'] = [21,22,23]
+
+		# MRO
+		self.leds['MRO'] = {}
+		self.leds['MRO']['pins'] = [24,25,26]
+
+		# Psyche
+		self.leds['PSYC'] = {}
+		self.leds['PSYC']['pins'] = [27,28,29]
+
+
+
+
 
 		for key in self.leds:
 			self.leds[key]['color'] = (0,0,0)
