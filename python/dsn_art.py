@@ -3,7 +3,7 @@
 import sys
 
 # Git submodule
-from pydsn.parser import *
+from parser import *
 
 # Specific hardware config
 import hardware
