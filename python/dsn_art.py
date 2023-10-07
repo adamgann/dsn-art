@@ -22,6 +22,7 @@ def main():
             data = parser.fetch_data()
             update_sc_leds(data, hardware, leds)
             time.sleep(10)
+            print("loop")
             
         except KeyboardInterrupt:
             print("Caught interrupt")
@@ -30,13 +31,16 @@ def main():
 
 def update_sc_leds(data, hardware, leds):
     for ant in data.keys():
-        # Get targets (can be multiple)
+        # Get targets (can be multiple). Filter out 
+        # any targets that aren't on the board
         targets = list(data[ant]["targets"].keys())
-        for spacecraft in targets:
+        filt_targets = [x for x in targets if x.lower() in hardware.spacecraft]
+        
+        for spacecraft in filt_targets:
             status = calc_status(data[ant])
             print("Status",status)
             print("Spacecraft",spacecraft)
-            if status and spacecraft in hardware.spacecraft:
+            if status:
                 leds.set_group(hardware[spacecraft], status)
             
 def calc_status(ant_dict):
