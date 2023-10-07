@@ -24,9 +24,10 @@ class Mapping:
         self._data["psyc"] = [27, 28, 29]  # Psyche
 
     def __getitem__(self, name):
-        if name not in self._data:
+        key = name.lower()
+        if key not in self._data:
             raise ValueError(f"Spacecraft {name} not on board.")
-        return self._data[name]
+        return self._data[key]
 
     @property
     def spacecraft(self):
