@@ -1,5 +1,6 @@
-# coding=utf-8
+"""Parse DSN webpage, adapted from github.com/russss/pydsn"""
 from __future__ import division, absolute_import, print_function, unicode_literals
+import logging
 from decimal import Decimal
 import time
 import requests
@@ -7,6 +8,7 @@ import logging
 import dateutil.parser
 from lxml import etree
 
+logger = logging.getLogger(__name__)
 
 def to_decimal(value):
     if value == "" or value == "null":
@@ -31,12 +33,10 @@ class DSNParser(object):
         url = self.get_url()
         self.log.debug("Fetching %s" % url)
         response = self.http_session.get(url)
-        print(response.content)
         doc = etree.fromstring(response.content)
         dishes = doc.xpath("/dsn/dish")
         result = {}
         for dish in dishes:
-            print("parsing dish", dish.get("azimuthAngle"))
             dish_name, data = self.parse_dish(dish)
             result[dish_name] = data
         return result
