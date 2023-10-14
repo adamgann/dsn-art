@@ -4,6 +4,7 @@ import sys
 import time
 import logging
 import argparse
+import signal
 from datetime import datetime
 
 # Git submodule
@@ -15,6 +16,8 @@ from led import Leds, Status
 
 logger = logging
 
+# Map kill to KeyboardInterrupt
+signal.signal(signal.SIGTERM, signal.default_int_handler)
 
 
 def main(window, loop_time, verbose=False):
