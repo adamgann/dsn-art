@@ -21,7 +21,7 @@ class Mapping:
         self._data["m20"] = [18, 19, 20]  # Mars 2020
         self._data["jno"] = [21, 22, 23]  # Juno
         self._data["mro"] = [24, 25, 26]
-        self._data["psyc"] = [27, 28, 29]  # Psyche
+        self._data["vgr1"] = [27, 28, 29]  # Voyager 1
 
     def __getitem__(self, name):
         key = name.lower()
