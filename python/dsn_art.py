@@ -68,8 +68,9 @@ def update_sc_leds(data, hardware, leds):
     for ant in data.keys():
         # Get targets (can be multiple). Filter out 
         # any targets that aren't on the board
-        targets = list(data[ant]["targets"].keys())
-        filt_targets = [x for x in targets if x.lower() in hardware.spacecraft]
+        targets_raw = list(data[ant]["targets"].keys())
+        targets_low = [x.lower() for x in targets_raw]
+        filt_targets = [x for x in targets_low if x in hardware.spacecraft]
         logger.debug(f"Antenna {ant} has {len(filt_targets)} spacecraft on our list active.")
         
         for spacecraft in filt_targets:
@@ -82,7 +83,7 @@ def update_sc_leds(data, hardware, leds):
     # spacecraft after it ends contact with DSN. 
     for name, status in sc_update.items():
         logger.debug(f"{name} -> {status}")
-        leds.set_group(hardware[spacecraft], status)
+        leds.set_group(hardware[name], status)
         
             
 def calc_status(ant_dict):
