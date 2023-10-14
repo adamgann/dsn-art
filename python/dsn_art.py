@@ -74,6 +74,7 @@ def update_sc_leds(data, hardware, leds):
         logger.debug(f"Antenna {ant} has {len(filt_targets)} spacecraft on our list active.")
         
         for spacecraft in filt_targets:
+            logger.debug(f"Parsing {spacecraft}")
             status = calc_status(data[ant])
             logger.info(f"Found status of {status} for {spacecraft}")
             sc_update[spacecraft] = status
@@ -92,6 +93,7 @@ def calc_status(ant_dict):
     # Get data types for uplink and downlink.
     up_type = extract_type(ant_dict["up_signal"])
     down_type = extract_type(ant_dict["down_signal"])
+    logger.debug(f"Up: {up_type}  Down: {down_type}")
     
     # If no data/carrier, return None.
     if up_type == down_type == None:
@@ -141,7 +143,7 @@ if __name__ == "__main__":
     parser.add_argument("-v", "--verbose", action="store_true",
     help = "Increase output verbosity")
     parser.add_argument("-l", "--loop-time", type=int, 
-    default = 10, help="How often in seconds to run loop.",
+    default = 60, help="How often in seconds to run loop.",
     dest="loop_time")
     
     # Allow operation within a time window.

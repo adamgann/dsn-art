@@ -14,9 +14,9 @@ logger = logging.getLogger(__name__)
 class Status(Enum):
     """RGB triplet for each type of spacecraft status."""
     OFF = (0, 0, 0)
-    UP_DATA = (0, 0, 235)
-    DOWN_DATA = (0, 0, 235)
-    BOTH_DATA = (0, 0, 235)
+    UP_DATA = (0, 235, 145)
+    DOWN_DATA = (0, 130, 235)
+    BOTH_DATA = (225, 0, 235)
     UP_CARRIER = (0, 0, 235)
     DOWN_CARRIER = (0, 0, 235)
     BOTH_CARRIER = (0, 0, 235)
