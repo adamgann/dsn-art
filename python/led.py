@@ -1,5 +1,6 @@
 """Set groups of LEDs to certain colors based on status."""
 from enum import Enum
+import logging
 
 # Imports for Adafruit Neopixels
 import board
@@ -8,6 +9,7 @@ import neopixel
 # Neopixel strip is cut to 30 LEDs
 NUM_LEDS = 30
 
+logger = logging.getLogger(__name__)
 
 class Status(Enum):
     """RGB triplet for each type of spacecraft status."""
@@ -39,4 +41,5 @@ class Leds:
         RGB triplet contained in status."""
         for pin in pins:
             self._pixels[pin] = status.value
+            logger.debug(f"LED #{pin} to {status.value}")
 
