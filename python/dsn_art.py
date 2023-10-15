@@ -37,10 +37,14 @@ def main(window, loop_time, verbose=False):
 
     while True:
         try:
+            # Run only if within time window
             if time_within_window(window):
                 data = parser.fetch_data()
                 update_sc_leds(data, hardware, leds)
                 logger.info(f"Sleep {loop_time} seconds")
+            # Otherwise, turn off all LEDS
+            else:
+                leds.all_off()
             time.sleep(loop_time)
             
             
@@ -155,6 +159,6 @@ if __name__ == "__main__":
     default = default_window,
     help = "Time window to display LEDS in 24 hour HH:MM-HH:MM format.")
     args = parser.parse_args()
-    print(args.window)
+
     
     main(args.window, args.loop_time, args.verbose)
