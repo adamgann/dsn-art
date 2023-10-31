@@ -3,8 +3,8 @@
 import time
 
 # Custom hardware/led configuration
-from mapping import Mapping
-from led import Leds, Status
+from dsnleds.mapping import Mapping
+from dsnleds.led import Leds, Status
 
 def main():
     """Run main test, 1 second per group."""

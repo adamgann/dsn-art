@@ -7,12 +7,12 @@ import argparse
 import signal
 from datetime import datetime
 
-# Git submodule
-from parser import DSNParser
+# DSN Parsing module
+from .parser import DSNParser
 
 # Specific hardware config
-from mapping import Mapping
-from led import Leds, Status
+from .mapping import Mapping
+from .led import Leds, Status
 
 logger = logging
 
