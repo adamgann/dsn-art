@@ -150,7 +150,7 @@ if __name__ == "__main__":
     parser.add_argument("-v", "--verbose", action="store_true",
     help = "Increase output verbosity")
     parser.add_argument("-l", "--loop-time", type=int, 
-    default = 60, help="How often in seconds to run loop.",
+    default = 150, help="How often in seconds to run loop.",
     dest="loop_time")
     
     # Allow operation within a time window.
