@@ -56,7 +56,7 @@ def main():
             if time_within_window(args.window):
                 data = parser.fetch_data()
                 update_sc_leds(data, hardware, leds)
-                logger.info(f"Sleep {loop_time} seconds")
+                logger.info(f"Sleep {args.loop_time} seconds")
             # Otherwise, turn off all LEDS
             else:
                 leds.all_off()
